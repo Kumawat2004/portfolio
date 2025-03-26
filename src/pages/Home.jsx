@@ -1,4 +1,4 @@
-// Home.jsx
+// Fully Responsive Home.jsx with Optimized Background & Typing Effect
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import image from "../assets/3.jpeg";
@@ -40,9 +40,9 @@ const Home = () => {
   return (
     <main
       className="relative w-full h-screen flex flex-col justify-center items-center text-white bg-cover bg-center"
-      style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center" }}
+      style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "top center" }}
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-60"></div>
 
       <motion.div
         className="relative w-full max-w-4xl text-center px-6"
@@ -50,7 +50,7 @@ const Home = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
           Prakash Kumawat
         </h1>
         <p className="text-lg sm:text-2xl md:text-3xl mt-4">

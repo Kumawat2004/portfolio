@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <main
-      className="relative w-full h-screen flex flex-col justify-center items-center text-white bg-cover bg-center"
+      className="relative w-full h-screen flex flex-col justify-center items-center text-white bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "top center" }}
     >
       <div className="absolute inset-0 bg-black opacity-60"></div>

@@ -1,23 +1,22 @@
-// Fully Responsive Contact.jsx - No Y-Axis Scroll Issue
 import React from "react";
 import { motion } from "framer-motion";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 
 const Contact = () => {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16 overflow-hidden">
+    <section className="max-w-6xl mx-auto px-6 py-16  overflow-hidden">
       {/* Title Animation */}
       <motion.div 
-        className="mb-10 text-center"
+        className="mb-10 "
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold text-gray-900">Contact</h2>
-        <div className="w-16 h-1 bg-blue-500 mx-auto mt-2"></div>
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
+        <div className="w-16 h-1 bg-blue-500 mb-6"></div>
         <p className="text-gray-600 mt-4">
-          Feel free to reach out for any inquiries or collaborations!
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
         </p>
       </motion.div>
 
@@ -41,7 +40,7 @@ const Contact = () => {
             </motion.div>
             <div>
               <h3 className="font-semibold text-gray-900">Address</h3>
-              <p className="text-gray-600">Shyam Colony, Chomu, Jaipur, Rajasthan - 303702, India</p>
+              <p className="text-gray-600">Railway Station Road, Shyam Colony, Chomu, Jaipur-303702</p>
             </div>
           </div>
 
@@ -71,6 +70,16 @@ const Contact = () => {
               <h3 className="font-semibold text-gray-900">Email Us</h3>
               <p className="text-gray-600">prakashkmwt04@gmail.com</p>
             </div>
+          </div>
+
+          {/* Google Map */}
+          <div className="mt-6">
+            <iframe
+              className="w-full h-52 rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28399.700324201443!2d75.70897955!3d27.1574688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1742996349969!5m2!1sen!2sin"
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
           </div>
         </motion.div>
 

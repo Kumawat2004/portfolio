@@ -4,7 +4,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Resume = () => {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-12">
+    <section className="max-w-6xl mx-auto px-6 py-12 overflow-hidden">
       {/* Resume Heading */}
       <motion.h2 
         className="text-4xl font-bold mb-4"

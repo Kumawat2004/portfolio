@@ -44,7 +44,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16">
+    <section className="max-w-6xl mx-auto px-6 py-16 overflow-hidden">
       {/* Title Animation */}
       <motion.div 
         className="mb-10 text-center"

@@ -1,10 +1,40 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+  const [isSent, setIsSent] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_4sgudih", // Replace with your actual Service ID
+        "template_eiivlcr", // Replace with your actual Template ID
+        form.current,
+        "GIpK3C2N882_gEp5D" // Replace with your actual Public Key
+      )
+      .then(
+        (result) => {
+          console.log("Email successfully sent!", result.text);
+          setIsSent(true);
+          setMessage("Message sent successfully!");
+          form.current.reset(); // Form reset after successful submission
+        },
+        (error) => {
+          console.log("Error sending email:", error.text);
+          setIsSent(false);
+          setMessage("Failed to send message. Please try again later.");
+        }
+      );
+  };
+
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16  overflow-hidden">
+    <section className="max-w-6xl mx-auto px-6 py-16">
       {/* Title Animation */}
       <motion.div 
         className="mb-10 "
@@ -16,7 +46,7 @@ const Contact = () => {
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
         <div className="w-16 h-1 bg-blue-500 mb-6"></div>
         <p className="text-gray-600 mt-4">
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+          Feel free to reach out for any inquiries or collaborations!
         </p>
       </motion.div>
 
@@ -40,7 +70,7 @@ const Contact = () => {
             </motion.div>
             <div>
               <h3 className="font-semibold text-gray-900">Address</h3>
-              <p className="text-gray-600">Railway Station Road, Shyam Colony, Chomu, Jaipur-303702</p>
+              <p className="text-gray-600">Shyam Colony, Chomu, Jaipur-303702</p>
             </div>
           </div>
 
@@ -91,12 +121,13 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-gray-700">Your Name</label>
                 <input
                   type="text"
+                  name="from_name"
                   className="w-full p-2 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-400"
                   placeholder="John Doe"
                   required
@@ -106,6 +137,7 @@ const Contact = () => {
                 <label className="block text-gray-700">Your Email</label>
                 <input
                   type="email"
+                  name="from_email"
                   className="w-full p-2 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-400"
                   placeholder="example@email.com"
                   required
@@ -117,6 +149,7 @@ const Contact = () => {
               <label className="block text-gray-700">Subject</label>
               <input
                 type="text"
+                name="subject"
                 className="w-full p-2 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-400"
                 placeholder="Enter Subject"
                 required
@@ -126,6 +159,7 @@ const Contact = () => {
             <div className="mt-4">
               <label className="block text-gray-700">Message</label>
               <textarea
+                name="message"
                 className="w-full p-2 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-400"
                 rows="5"
                 placeholder="Write your message..."
@@ -133,14 +167,16 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <div className="mt-6 text-center">
-              <motion.button 
-                className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition"
-                whileHover={{ scale: 1.05 }}
-              >
-                Send Message
-              </motion.button>
-            </div>
+            <div className="mt-6 text-center flex flex-col items-center space-y-3">
+  <motion.button 
+    type="submit"
+    className="bg-blue-500 text-white px-8 py-3 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 ease-in-out"
+    whileHover={{ scale: 1.1 }}
+  >
+    {isSent ? " Message Sent!" : " Send Message"}
+  </motion.button>
+  {message && <p className={`mt-2 text-sm font-semibold ${isSent ? 'text-green-600' : 'text-red-500'}`}>{message}</p>}
+</div>
           </form>
         </motion.div>
       </div>

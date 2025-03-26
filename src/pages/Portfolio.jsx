@@ -34,7 +34,7 @@ const Portfolio = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-12 overflow-hidden">
+    <section className="max-w-6xl mx-auto px-6 py-12 ">
       {/* Heading Animation */}
       <motion.h2
         className="text-4xl font-bold mb-4"

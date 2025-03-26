@@ -44,18 +44,18 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16 overflow-hidden">
+    <section className="max-w-6xl mx-auto px-6 py-16 ">
       {/* Title Animation */}
       <motion.div 
-        className="mb-10 text-center"
+        className="mb-10 "
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold text-gray-900">Services</h2>
-        <div className="w-16 h-1 bg-blue-500 mt-2 mx-auto"></div>
-        <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Services</h2>
+        <div className="w-16 h-1 bg-blue-500 mt-2 "></div>
+        <p className="text-gray-600 mt-4 max-w-3xl ">
           Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
         </p>
       </motion.div>

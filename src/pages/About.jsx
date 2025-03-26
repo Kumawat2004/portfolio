@@ -8,7 +8,7 @@ import profileImage from "../assets/logo.jpg"; // Ensure the correct path
 
 const About = () => {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-12 overflow-hidden">
+    <section className="max-w-6xl mx-auto px-6 py-12 ">
       {/* Heading */}
       <motion.h2 
         className="text-4xl font-bold text-gray-900 mb-4"

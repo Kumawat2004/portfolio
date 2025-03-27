@@ -7,6 +7,7 @@ import Resume from "./pages/Resume";
 import Portfolio from "./pages/Portfolio";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -27,7 +28,9 @@ const App = () => {
         <section id="portfolio"><Portfolio /></section>
         <section id="services"><Service /></section>
         <section id="contact"><Contact /></section>
+        <section><Footer /></section>
       </div>
+      
     </div>
   );
 };

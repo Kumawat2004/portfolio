@@ -38,7 +38,7 @@ const Resume = () => {
           {/* Summary Section */}
           <h3 className="text-2xl font-bold mb-3">Summary</h3>
           <div className="border-l-4 border-blue-500 pl-4 mb-6">
-            <h4 className="text-xl font-semibold">Prakash Kumar</h4>
+            <h4 className="text-xl font-semibold">Prakash Kumawat</h4>
             <p className="italic text-gray-600 mb-2">
               I am a dedicated web developer and dedicated student of information technology.
             </p>

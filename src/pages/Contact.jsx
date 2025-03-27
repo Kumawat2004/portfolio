@@ -68,10 +68,12 @@ const Contact = () => {
             >
               <FiMapPin size={24} />
             </motion.div>
-            <div>
-              <h3 className="font-semibold text-gray-900">Address</h3>
-              <p className="text-gray-600">Shyam Colony, Chomu, Jaipur-303702</p>
-            </div>
+            <div className="">
+  <h3 className="font-semibold text-gray-900">Address</h3>
+  <p className="text-gray-600 text-sm md:text-base lg:text-lg">
+    Shyam Colony, Chomu, Jaipur-303702
+  </p>
+</div>
           </div>
 
           {/* Phone */}
@@ -84,7 +86,7 @@ const Contact = () => {
             </motion.div>
             <div>
               <h3 className="font-semibold text-gray-900">Call Us</h3>
-              <p className="text-gray-600">+91 9166577321</p>
+              <p className="text-gray-600 text-sm md:text-base lg:text-lg">+91 9166577321</p>
             </div>
           </div>
 
@@ -98,7 +100,7 @@ const Contact = () => {
             </motion.div>
             <div>
               <h3 className="font-semibold text-gray-900">Email Us</h3>
-              <p className="text-gray-600">prakashkmwt04@gmail.com</p>
+              <p className="text-gray-600 text-sm md:text-base lg:text-lg">prakashkmwt04@gmail.com</p>
             </div>
           </div>
 

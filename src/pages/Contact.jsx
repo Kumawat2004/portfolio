@@ -62,47 +62,48 @@ const Contact = () => {
         >
           {/* Address */}
           <div className="flex items-start space-x-4 mb-6">
-            <motion.div 
-              className="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-500 rounded-full"
-              whileHover={{ scale: 1.1 }}
-            >
-              <FiMapPin size={24} />
-            </motion.div>
-            <div className="">
-  <h3 className="font-semibold text-gray-900">Address</h3>
-  <p className="text-gray-600 text-sm md:text-base lg:text-lg">
-    Shyam Colony, Chomu, Jaipur-303702
-  </p>
+  <motion.div 
+    className="w-11 h-11 flex items-center justify-center bg-blue-100 text-blue-500 rounded-full"
+    whileHover={{ scale: 1.1 }}
+  >
+    <FiMapPin className="w-6 h-6" />
+  </motion.div>
+  <div>
+    <h3 className="font-semibold text-gray-900">Address</h3>
+    <p className="text-gray-600 text-sm md:text-base lg:text-lg">
+      Shyam Colony, Chomu, Jaipur-303702
+    </p>
+  </div>
 </div>
-          </div>
 
-          {/* Phone */}
-          <div className="flex items-start space-x-4 mb-6">
-            <motion.div 
-              className="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-500 rounded-full"
-              whileHover={{ scale: 1.1 }}
-            >
-              <FiPhone size={24} />
-            </motion.div>
-            <div>
-              <h3 className="font-semibold text-gray-900">Call Us</h3>
-              <p className="text-gray-600 text-sm md:text-base lg:text-lg">+91 9166577321</p>
-            </div>
-          </div>
+{/* Phone */}
+<div className="flex items-start space-x-4 mb-6">
+  <motion.div 
+    className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-blue-100 text-blue-500 rounded-full"
+    whileHover={{ scale: 1.1 }}
+  >
+    <FiPhone className="w-5 h-5 sm:w-6 sm:h-6" />
+  </motion.div>
+  <div>
+    <h3 className="font-semibold text-gray-900">Call Us</h3>
+    <p className="text-gray-600 text-sm md:text-base lg:text-lg">+91 9166577321</p>
+  </div>
+</div>
 
-          {/* Email */}
-          <div className="flex items-start space-x-4">
-            <motion.div 
-              className="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-500 rounded-full"
-              whileHover={{ scale: 1.1 }}
-            >
-              <FiMail size={24} />
-            </motion.div>
-            <div>
-              <h3 className="font-semibold text-gray-900">Email Us</h3>
-              <p className="text-gray-600 text-sm md:text-base lg:text-lg">prakashkmwt04@gmail.com</p>
-            </div>
-          </div>
+{/* Email */}
+<div className="flex items-start space-x-4">
+  <motion.div 
+    className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-blue-100 text-blue-500 rounded-full"
+    whileHover={{ scale: 1.1 }}
+  >
+    <FiMail className="w-5 h-5 sm:w-6 sm:h-6" />
+  </motion.div>
+  <div>
+    <h3 className="font-semibold text-gray-900">Email Us</h3>
+    <p className="text-gray-600 text-sm md:text-base lg:text-lg">prakashkmwt04@gmail.com</p>
+  </div>
+</div>
+
 
           {/* Google Map */}
           <div className="mt-6">

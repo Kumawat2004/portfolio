@@ -63,10 +63,10 @@ const About = () => {
             {[
               { icon: FaBirthdayCake, label: "Birthday", value: "1 March 2004" },
               { icon: FaUserGraduate, label: "Age", value: "21" },
-              { icon: FaGlobe, label: "Website", value: <li onClick={() => window.open("https://www.prakash.com", "_blank")} className="text-blue-600 hover:underline list-none">www.prakash.com</li>  },
+              { icon: FaGlobe, label: "Website", value: <li onClick={() => window.open("https://portfolio-by-prakash.netlify.app/", "_blank")} className="text-blue-600 cursor-pointer list-none">www.prakash.com</li>  },
               { icon: FaBriefcase, label: "Degree", value: "Bachelor" },
               { icon: FaPhone, label: "Phone", value: "+91 9166577321" },
-              { icon: FaEnvelope, label: "Email", value: <li onClick={() => window.open("mailto:prakashkmwt04@gmail.com", "_blank")} className="text-blue-600 hover:underline list-none">prakashkmwt04@gmail.com</li> },
+              { icon: FaEnvelope, label: "Email", value: <li onClick={() => window.open("mailto:prakashkmwt04@gmail.com", "_blank")} className="text-blue-600  list-none cursor-pointer">prakashkmwt04@gmail.com</li> },
               { icon: FaMapMarkerAlt, label: "City", value: "Jaipur" },
               { icon: FaBriefcase, label: "Freelance", value: "Available" },
             ].map((item, index) => (

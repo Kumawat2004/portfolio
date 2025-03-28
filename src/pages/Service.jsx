@@ -1,45 +1,44 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FiBriefcase, FiBarChart, FiSun, FiCalendar } from "react-icons/fi";
-import { FaBinoculars } from "react-icons/fa";
+import { FiMonitor, FiFilm, FiCloud, FiCode, FiShield, FiDatabase } from "react-icons/fi";
 
 const services = [
   {
     id: 1,
-    icon: <FiBriefcase className="text-3xl" />,
-    title: "Lorem Ipsum",
-    description: "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.",
-  },
-  {
+    icon: <FiMonitor className="text-3xl" />,  // UI/UX Development
+    title: "UI/UX Development",
+    description: "We create responsive, user-friendly interfaces using React.js and Tailwind CSS.",
+},
+{
     id: 2,
-    icon: <FiBarChart className="text-3xl" />,
-    title: "Dolor Sitema",
-    description: "Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-  },
-  {
+    icon: <FiFilm className="text-3xl" />,  // Animated Website
+    title: "Animated Website",
+    description: "We create interactive websites with smooth animations using Framer Motion.",
+},
+{
     id: 3,
-    icon: <FaBinoculars className="text-3xl" />,
-    title: "Magni Dolores",
-    description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-  },
-  {
+    icon: <FiCloud className="text-3xl" />,  // Deployment
+    title: "Deployment",
+    description: "Deploy applications on AWS and Vercel with cloud storage integration.",
+},
+{
     id: 4,
-    icon: <FiSun className="text-3xl" />,
-    title: "Nemo Enim",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus.",
-  },
-  {
+    icon: <FiCode className="text-3xl" />,  // API Development
+    title: "API Development",
+    description: "We build secure, scalable APIs with Node.js and Express.js.",
+},
+{
     id: 5,
-    icon: <FiBarChart className="text-3xl" />,
-    title: "Sed ut perspiciatis",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-  },
-  {
+    icon: <FiShield className="text-3xl" />,  // User Authentication
+    title: "User Authentication",
+    description: "We implement JWT, OAuth, and RBAC for secure user access.",
+},
+{
     id: 6,
-    icon: <FiCalendar className="text-3xl" />,
-    title: "Eiusmod Tempor",
-    description: "Et harum quidem rerum facilis est et expedita distinctio.",
-  },
+    icon: <FiDatabase className="text-3xl" />,  // Database Management
+    title: "Database Management",
+    description: "We optimize and manage MongoDB with Mongoose for fast, efficient CRUD.",
+},
 ];
 
 const Services = () => {
@@ -56,7 +55,7 @@ const Services = () => {
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Services</h2>
         <div className="w-16 h-1 bg-blue-500 mt-2 "></div>
         <p className="text-gray-600 mt-4 max-w-3xl ">
-          Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
+        We provide full-stack development services, including modern and responsive UI/UX with React.js, efficient state management, and seamless API integration. On the backend, we build secure and scalable RESTful APIs with Node.js and Express, implement authentication, and manage databases using MongoDB for optimal performance.
         </p>
       </motion.div>
 
@@ -84,7 +83,6 @@ const Services = () => {
             {/* Icon with Background Animation */}
             <motion.div 
               className="w-20 h-16 flex items-center justify-center bg-blue-500 text-white rounded-[60px] shadow-md"
-              whileHover={{ rotate: 10 }}
             >
               {service.icon}
             </motion.div>

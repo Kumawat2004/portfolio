@@ -3,7 +3,13 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import image from "../assets/3.jpeg";
 
-const words = ["Web Developer", "Frontend Developer", "React Developer", "Web Designer"];
+const words = [
+  "MERN Stack Developer",
+  "Frontend Developer",
+  "Backend Developer",
+  "React Developer",
+  "Web Designer",
+];
 
 const Home = () => {
   const [text, setText] = useState("");
@@ -40,7 +46,11 @@ const Home = () => {
   return (
     <main
       className="relative w-full h-screen flex flex-col justify-center items-center text-white bg-cover bg-center "
-      style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "top center" }}
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "top center",
+      }}
     >
       <div className="absolute inset-0 bg-black opacity-60"></div>
 
@@ -54,7 +64,10 @@ const Home = () => {
           Prakash Kumawat
         </h1>
         <p className="text-lg sm:text-2xl md:text-3xl mt-4">
-          I'm <span className="font-semibold border-r-4 pr-2 text-blue-400">{text}</span>
+          I'm{" "}
+          <span className="font-semibold border-r-4 pr-2 text-blue-400">
+            {text}
+          </span>
         </p>
       </motion.div>
     </main>
